@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import sun from '../assets/sun.svg';
-import moon from '../assets/moon.svg';
-
 const StyledNavbar = styled.div`
 	padding: 2rem 0;
 	display: flex;
@@ -23,13 +20,17 @@ const StyledNavbar = styled.div`
 	.links {
 		display: flex;
 		flex-direction: row;
+		align-items: center;
 
 		a {
-			font-size: 0.9rem;
 			color: var(--color);
-			padding: 0 0.15rem;
-			margin: 0 0.75rem;
+			padding: 0.25rem;
+			margin: 0 1rem;
 			position: relative;
+
+			&:last-of-type {
+				margin-right: 1.5rem;
+			}
 
 			&::after {
 				content: '';
