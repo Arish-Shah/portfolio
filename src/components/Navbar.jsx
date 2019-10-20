@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const StyledNavbar = styled.div`
-	padding: 2rem 0;
+	padding: 1rem 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -15,6 +15,7 @@ const StyledNavbar = styled.div`
 		font-weight: 600;
 		padding: 0.5rem;
 		font-family: monospace;
+		border-radius: 4px;
 	}
 
 	.links {
@@ -65,7 +66,7 @@ const Navbar = () => {
 	return (
 		<StyledNavbar>
 			<a href="/" className="navbar-brand">
-				ishaq.
+				i.
 			</a>
 			<div className="links">
 				<a href="#/works">Works</a>
