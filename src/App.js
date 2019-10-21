@@ -3,8 +3,10 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 import About from './components/About';
+import ContactLinks from './components/ContactLinks';
 
 import statements from './content/about-me';
+import Footer from './components/Footer';
 
 const App = () => {
 	return (
@@ -13,6 +15,15 @@ const App = () => {
 				<Navbar />
 				<Main />
 				<About statements={statements} />
+				<h2 id="works" className="section-title">
+					Works
+				</h2>
+				<div className="background" />
+				<h2 id="contact" className="section-title">
+					Contact Me!
+				</h2>
+				<ContactLinks />
+				<Footer />
 			</div>
 		</div>
 	);
