@@ -7,6 +7,7 @@ import ContactLinks from './components/ContactLinks';
 
 import statements from './content/about-me';
 import Footer from './components/Footer';
+import Works from './components/Works';
 
 const App = () => {
 	return (
@@ -18,6 +19,7 @@ const App = () => {
 				<h2 id="works" className="section-title">
 					Works
 				</h2>
+				<Works />
 				<div className="background" />
 				<h2 id="contact" className="section-title">
 					Contact Me!

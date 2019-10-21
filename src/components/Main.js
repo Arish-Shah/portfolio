@@ -6,8 +6,7 @@ const Hero = () => {
 		<div className="hero-container">
 			<Typewriter className="hero-title" text="Mohammed Ishaq" />
 			<div className="hero-description">
-				I am a web developer at MemSQL. My passion is building simple, beautiful
-				user experiences.
+				I am a designer who likes designing blah blah.
 				<br />
 				Check out my <a href="#projects">side-projects</a> below.
 			</div>
