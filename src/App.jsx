@@ -1,23 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar/Navbar';
+import Main from './components/Navbar/Main';
 
 const App = () => {
-	const [up, setUp] = useState(false);
-
-	useEffect(() => {
-		window.onscroll = () => {
-			if (window.scrollY === 0) {
-				setUp(false);
-			} else {
-				setUp(true);
-			}
-		};
-	}, []);
-
 	return (
 		<div className="App">
-			<Navbar goingUp={up} />
-			<div style={{ height: '1000px' }}></div>
+			<Navbar />
+			<Main />
 		</div>
 	);
 };
