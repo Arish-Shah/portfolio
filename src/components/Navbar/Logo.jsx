@@ -4,32 +4,19 @@ import styled from 'styled-components';
 const StyledLogo = styled.div`
 	overflow: hidden;
 	height: 2em;
+	overflow: hidden;
+	width: 10em;
 
-	.top {
-		font-size: 1.5em;
-		font-weight: bold;
-		font-family: monospace;
-		display: ${({ goingUp }) => (goingUp ? 'none' : 'inline-block')};
-		margin-left: 0em;
-		animation: slide 250ms linear;
-	}
-
+	.top,
 	.not-top {
 		font-size: 1.5em;
 		font-weight: bold;
 		font-family: monospace;
-		display: ${({ goingUp }) => (goingUp ? 'inline-block' : 'none')};
-		margin-left: 0em;
-		animation: slide 250ms linear;
 	}
 
-	@keyframes slide {
-		0% {
-			margin-left: -10em;
-		}
-		100% {
-			margin-left: 0;
-		}
+	.top {
+		margin-left: ${props => (props.goingUp ? '-8em' : '0em')};
+		transition: margin 0.1s linear;
 	}
 `;
 
