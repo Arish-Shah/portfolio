@@ -3,20 +3,33 @@ import styled from 'styled-components';
 
 const StyledLogo = styled.div`
 	overflow: hidden;
-	width: 11em;
 	height: 2em;
 
 	.top {
 		font-size: 1.5em;
+		font-weight: bold;
 		font-family: monospace;
-		margin-left: ${({ goingUp }) => (goingUp ? '-8em' : '0em')};
-		transition: margin 250ms linear;
+		display: ${({ goingUp }) => (goingUp ? 'none' : 'inline-block')};
+		margin-left: 0em;
+		animation: slide 250ms linear;
 	}
 
 	.not-top {
-		font-family: monospace;
 		font-size: 1.5em;
-		margin-left: ${({ goingUp }) => (goingUp ? '0' : '0em')};
+		font-weight: bold;
+		font-family: monospace;
+		display: ${({ goingUp }) => (goingUp ? 'inline-block' : 'none')};
+		margin-left: 0em;
+		animation: slide 250ms linear;
+	}
+
+	@keyframes slide {
+		0% {
+			margin-left: -10em;
+		}
+		100% {
+			margin-left: 0;
+		}
 	}
 `;
 
