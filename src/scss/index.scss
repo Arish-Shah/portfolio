@@ -83,12 +83,12 @@ a {
 .come-up {
 	margin-top: 0px;
 	opacity: 1;
-	animation: up 200ms linear;
+	animation: up 200ms ease-in;
 }
 
 @keyframes up {
 	0% {
 		opacity: 0;
-		margin-top: 30px;
+		margin-top: 60px;
 	}
 }
