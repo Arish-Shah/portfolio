@@ -81,14 +81,14 @@ a {
 }
 
 .come-up {
-	margin-top: 0px;
+	transform: translateY(0px);
 	opacity: 1;
 	animation: up 200ms ease-in;
 }
 
 @keyframes up {
 	0% {
+		transform: translateY(60px);
 		opacity: 0;
-		margin-top: 60px;
 	}
 }
