@@ -1,15 +1,15 @@
-import React from 'react';
-import Typewriter from './Typewriter';
+import React from 'react'
+import Typewriter from './Typewriter'
 
 const Hero = () => {
 	const goto = (event, top) => {
-		event.preventDefault();
+		event.preventDefault()
 
 		window.scrollTo({
 			top,
 			behavior: 'smooth'
-		});
-	};
+		})
+	}
 
 	return (
 		<div className="hero-container">
@@ -18,13 +18,13 @@ const Hero = () => {
 				I am a Graphic designer.
 				<br />
 				Check out some of my{' '}
-				<a onClick={event => goto(event, 1150)} href="#/works">
+				<a onClick={event => goto(event, 1050)} href="#/works">
 					works
 				</a>{' '}
 				below.
 			</div>
 		</div>
-	);
-};
+	)
+}
 
-export default Hero;
+export default Hero
