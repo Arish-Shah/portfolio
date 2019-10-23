@@ -5,7 +5,7 @@ const ContactLinks = () => {
 		<div className="contact-links">
 			<span>
 				<a
-					rel="noopener"
+					rel="noopener noreferrer"
 					target="_blank"
 					href="mailto:mohammedishaq12351@gmail.com"
 				>
@@ -14,7 +14,7 @@ const ContactLinks = () => {
 			</span>
 			<span>
 				<a
-					rel="noopener"
+					rel="noopener noreferrer"
 					target="_blank"
 					href="https://in.linkedin.com/in/mohammed-ishaq-38461614a"
 				>
@@ -23,7 +23,7 @@ const ContactLinks = () => {
 			</span>
 			<span>
 				<a
-					rel="noopener"
+					rel="noopener noreferrer"
 					target="_blank"
 					href="https://instagram.com/ishaq.097"
 				>
