@@ -79,3 +79,16 @@ a {
 	margin-top: 30px;
 	width: 50px;
 }
+
+.come-up {
+	margin-top: 0px;
+	opacity: 1;
+	animation: up 200ms linear;
+}
+
+@keyframes up {
+	0% {
+		opacity: 0;
+		margin-top: 30px;
+	}
+}
