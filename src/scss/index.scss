@@ -4,9 +4,9 @@
 @import 'breakpoints';
 
 @import 'Navbar';
-@import 'Hero';
+@import 'Main';
 @import 'About';
-@import 'Projects';
+@import 'Works';
 @import 'Contact';
 @import 'Footer';
 
@@ -88,7 +88,7 @@ a {
 
 @keyframes up {
 	0% {
-		transform: translateY(60px);
+		transform: translateY(120px);
 		opacity: 0;
 	}
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 import Navbar from './components/Navbar'
 import Main from './components/Main'
@@ -15,36 +15,32 @@ const App = () => {
 			<div className="home-container">
 				<Navbar />
 				<Main />
-				<ComeUp />
+				<About statements={statements} />
+				<h2 id="/works" className="section-title">
+					Works
+				</h2>
+				<Works />
+				<div className="background" />
+				<h2 id="/contact" className="section-title">
+					Contact Me!
+				</h2>
+				<ContactLinks />
+				<Footer />
 			</div>
 		</div>
 	)
 }
 
-const ComeUp = () => {
-	const [content, setContent] = useState(null)
+// const ComeUp = () => {
+// 	const [content, setContent] = useState(null)
 
-	useEffect(() => {
-		setTimeout(() => {
-			setContent(
-				<div className="come-up">
-					<About statements={statements} />
-					<h2 id="/works" className="section-title">
-						Works
-					</h2>
-					<Works />
-					<div className="background" />
-					<h2 id="/contact" className="section-title">
-						Contact Me!
-					</h2>
-					<ContactLinks />
-					<Footer />
-				</div>
-			)
-		}, 2000)
-	}, [])
+// 	useEffect(() => {
+// 		setTimeout(() => {
+// 			setContent(<div className="come-up"></div>)
+// 		}, 2000)
+// 	}, [])
 
-	return content
-}
+// 	return content
+// }
 
 export default App
