@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Img from 'react-image'
+import React from 'react'
+import ProgressiveImage from 'react-progressive-image'
 
 //images import
 //LARGE
@@ -24,7 +24,6 @@ import smallPhotoshopWorkshop from '../assets/small/photoshop-workshop.jpeg'
 import smallSeasonsGreeting from '../assets/small/seasons-greeting.jpeg'
 
 const Works = () => {
-	const [selectedImage, setSelectedImage] = useState(null)
 	document.body.style.overflow = 'auto'
 
 	const images = [
@@ -47,47 +46,18 @@ const Works = () => {
 		}
 	]
 
-	const handleClick = index => {
-		setSelectedImage(images[index])
-	}
-
-	const closeModal = event => {
-		if (!event.target.classList.contains('modal')) setSelectedImage(null)
-	}
-
 	return (
 		<>
 			<div className="works">
 				{images.map((image, index) => (
 					<div className="work-container" key={index}>
-						<Img
-							src={image.large}
-							loader={image.small}
-							alt={image.alt}
-							onClick={() => handleClick(index)}
-						/>
+						<ProgressiveImage src={image.large} placeholder={image.small}>
+							{src => <img src={src} alt="" />}
+						</ProgressiveImage>
 					</div>
 				))}
 			</div>
-			{selectedImage && <PopUp image={selectedImage} closeModal={closeModal} />}
 		</>
-	)
-}
-
-const PopUp = ({ image, closeModal }) => {
-	document.body.style.overflow = 'hidden'
-
-	return (
-		<div className="pop-up">
-			<div className="backdrop">
-				<span className="cross" onClick={e => closeModal(e)}>
-					&times;
-				</span>
-				<div className="modal">
-					<Img src={image.large} loader={image.small} />
-				</div>
-			</div>
-		</div>
 	)
 }
 

@@ -3,73 +3,12 @@
 	flex-direction: column;
 
 	.work-container {
-		overflow: hidden;
+		margin-bottom: 50px;
 		max-height: 350px;
-		width: 100%;
-		margin-bottom: 40px;
+		overflow: hidden;
 
 		img {
-			transform-origin: 50% 50%;
 			width: 100%;
-		}
-	}
-}
-
-@include mobile {
-	.work-container {
-		max-height: 500px;
-		margin-bottom: 0px;
-	}
-}
-
-.pop-up {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: rgba(0, 0, 0, 0.9);
-
-	.modal {
-		img {
-			max-width: 95vw;
-			max-height: 95vh;
-		}
-	}
-
-	.cross {
-		cursor: pointer;
-		color: #fff;
-		position: absolute;
-		right: 20px;
-		top: 20px;
-		font-size: 3rem;
-		font-weight: bold;
-		padding: 0.5rem;
-		background: #000;
-		border-radius: 100px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 2.5rem;
-		width: 2.5rem;
-	}
-}
-
-@include mobile {
-	.works {
-		grid-template-columns: 1fr;
-	}
-
-	.pop-up {
-		.cross {
-			height: 1.5rem;
-			width: 1.5rem;
-			font-size: 2rem;
 		}
 	}
 }
