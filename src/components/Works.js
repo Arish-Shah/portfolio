@@ -13,15 +13,15 @@ import largePage5 from '../assets/large/page-5.jpg'
 import largePhotoshopWorkshop from '../assets/large/photoshop-workshop.jpg'
 import largeSeasonsGreeting from '../assets/large/seasons-greeting.jpg'
 //SMALL
-import smallChristmas from '../assets/small/christmas.jpeg'
-import smallCloud from '../assets/small/cloud.jpeg'
-import smallHbs from '../assets/small/hbs.jpeg'
-import smallMss from '../assets/small/mss.jpeg'
-import smallPage3 from '../assets/small/page-3.jpeg'
-import smallPage4 from '../assets/small/page-4.jpeg'
-import smallPage5 from '../assets/small/page-5.jpeg'
-import smallPhotoshopWorkshop from '../assets/small/photoshop-workshop.jpeg'
-import smallSeasonsGreeting from '../assets/small/seasons-greeting.jpeg'
+import smallChristmas from '../assets/small/christmas.jpg'
+import smallCloud from '../assets/small/cloud.jpg'
+import smallHbs from '../assets/small/hbs.jpg'
+import smallMss from '../assets/small/mss.jpg'
+import smallPage3 from '../assets/small/page-3.jpg'
+import smallPage4 from '../assets/small/page-4.jpg'
+import smallPage5 from '../assets/small/page-5.jpg'
+import smallPhotoshopWorkshop from '../assets/small/photoshop-workshop.jpg'
+import smallSeasonsGreeting from '../assets/small/seasons-greeting.jpg'
 
 const Works = () => {
 	document.body.style.overflow = 'auto'
@@ -52,7 +52,13 @@ const Works = () => {
 				{images.map((image, index) => (
 					<div className="work-container" key={index}>
 						<ProgressiveImage src={image.large} placeholder={image.small}>
-							{src => <img src={src} alt="" />}
+							{(src, loading) => (
+								<img
+									style={{ filter: loading ? 'blur(20px)' : 'none' }}
+									src={src}
+									alt=""
+								/>
+							)}
 						</ProgressiveImage>
 					</div>
 				))}
