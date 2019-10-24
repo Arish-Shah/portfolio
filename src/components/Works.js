@@ -12,8 +12,8 @@ import photoshopWorkshop from '../assets/photoshop-workshop.jpg'
 import seasonsGreeting from '../assets/seasons-greeting.jpg'
 
 const Works = () => {
-	// const [selectedImage, setSelectedImage] = useState(null)
-	// const showImage = null
+	const [selectedImage, setSelectedImage] = useState(null)
+	const [loaded, setLoaded] = useState(false)
 
 	const images = [
 		{ src: christmas, alt: 'Christmas' },
@@ -27,20 +27,35 @@ const Works = () => {
 		{ src: seasonsGreeting, alt: "Season's Greetings" }
 	]
 
+	const handleClick = index => {
+		setSelectedImage(images[index])
+	}
+
 	return (
-		<div className="works">
-			{images.map((image, index) => (
-				<img key={index} src={image.src} alt={image.alt} />
-			))}
-		</div>
+		<>
+			<div className="works">
+				{images.map((image, index) => (
+					<img
+						key={index}
+						src={image.src}
+						alt={image.alt}
+						onClick={() => handleClick(index)}
+						onLoad={() => setLoaded(true)}
+					/>
+				))}
+			</div>
+			{selectedImage && <PopUp image={selectedImage} />}
+		</>
 	)
 }
 
-const PopUp = ({ img, alt }) => {
+const PopUp = ({ image }) => {
 	return (
-		<div className="backdrop">
-			<div className="modal">
-				<img src={img} alt={alt} />
+		<div className="pop-up">
+			<div className="backdrop">
+				<div className="modal">
+					<img src={image.src} alt={image.alt} />
+				</div>
 			</div>
 		</div>
 	)

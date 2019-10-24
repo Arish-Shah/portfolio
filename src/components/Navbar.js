@@ -13,7 +13,7 @@ const Navbar = () => {
 	return (
 		<div className="navbar-container">
 			<nav className="navbar">
-				<a onClick={event => goto(event, 1050)} href="#/works">
+				<a onClick={event => goto(event, 1100)} href="#/works">
 					Works
 				</a>
 				<a onClick={event => goto(event, 3000)} href="#/contact">

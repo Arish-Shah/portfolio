@@ -7,3 +7,29 @@
 		width: 100%;
 	}
 }
+
+.pop-up {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.75);
+
+	.modal {
+		img {
+			max-width: 100vw;
+			max-height: 100vh;
+		}
+	}
+}
+
+@include mobile {
+	.works {
+		grid-template-columns: 1fr;
+	}
+}

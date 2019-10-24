@@ -18,7 +18,7 @@ const Hero = () => {
 				I am a Graphic designer.
 				<br />
 				Check out some of my{' '}
-				<a onClick={event => goto(event, 1050)} href="#/works">
+				<a onClick={event => goto(event, 1100)} href="#/works">
 					works
 				</a>{' '}
 				below.
