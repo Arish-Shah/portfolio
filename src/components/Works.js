@@ -25,6 +25,7 @@ import smallSeasonsGreeting from '../assets/small/seasons-greeting.jpeg'
 
 const Works = () => {
 	const [selectedImage, setSelectedImage] = useState(null)
+	document.body.style.overflow = 'auto'
 
 	const images = [
 		{ large: largeChristmas, small: smallChristmas, alt: 'Christmas' },
@@ -50,20 +51,22 @@ const Works = () => {
 		setSelectedImage(images[index])
 	}
 
-	const closeModal = () => {
-		setSelectedImage(null)
+	const closeModal = event => {
+		if (!event.target.classList.contains('modal')) setSelectedImage(null)
 	}
 
 	return (
 		<>
 			<div className="works">
 				{images.map((image, index) => (
-					<Img
-						key={index}
-						src={image.large}
-						loader={image.small}
-						onClick={() => handleClick(index)}
-					/>
+					<div className="work-container" key={index}>
+						<Img
+							src={image.large}
+							loader={image.small}
+							alt={image.alt}
+							onClick={() => handleClick(index)}
+						/>
+					</div>
 				))}
 			</div>
 			{selectedImage && <PopUp image={selectedImage} closeModal={closeModal} />}
@@ -72,9 +75,14 @@ const Works = () => {
 }
 
 const PopUp = ({ image, closeModal }) => {
+	document.body.style.overflow = 'hidden'
+
 	return (
-		<div className="pop-up" onClick={closeModal}>
+		<div className="pop-up">
 			<div className="backdrop">
+				<span className="cross" onClick={e => closeModal(e)}>
+					&times;
+				</span>
 				<div className="modal">
 					<Img src={image.large} loader={image.small} />
 				</div>

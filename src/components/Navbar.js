@@ -16,7 +16,7 @@ const Navbar = () => {
 				<a onClick={event => goto(event, 1100)} href="#/works">
 					Works
 				</a>
-				<a onClick={event => goto(event, 3000)} href="#/contact">
+				<a onClick={event => goto(event, 10000)} href="#/contact">
 					Contact
 				</a>
 			</nav>
