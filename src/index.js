@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './App'
-import './scss/index.scss'
+import App from './App.jsx'
+import { GlobalStyles } from './styles/global'
 
-ReactDOM.render(<App />, document.getElementById('root'))
-
-if (module.hot) {
-	module.hot.accept()
-}
+ReactDOM.render(
+  <React.Fragment>
+    <GlobalStyles />
+    <App />
+  </React.Fragment>,
+  document.getElementById('root')
+)
