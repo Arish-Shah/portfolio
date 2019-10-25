@@ -7,7 +7,7 @@ const Hero = () => {
 
 		window.scrollTo({
 			top,
-			behavior: 'smooth'
+			behavior: 'smooth',
 		})
 	}
 

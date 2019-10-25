@@ -10,8 +10,9 @@
 @import 'Footer';
 
 @font-face {
-	font-family: 'Monaco';
-	src: url('./fonts/monaco-webfont.woff') format('woff');
+	font-family: 'Hack';
+	src: url(https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-regular.woff)
+		format('woff');
 }
 
 body {
