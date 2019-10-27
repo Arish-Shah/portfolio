@@ -13,12 +13,19 @@ const Works = () => {
 
 const Work = ({ image }) => {
 	return (
-		<div className="work" href="hello">
-			<div className="work-description">{image.alt}</div>
-			<div className="work-image-container">
-				<img src={image.src} alt={image.alt} />
+		<a href={image.link} target="_blank" rel="noopener noreferrer">
+			<div
+				href={image.link}
+				rel="noopener noreferrer"
+				target="_blank"
+				className="work"
+			>
+				<div className="work-description">{image.alt}</div>
+				<div className="work-image-container">
+					<img src={image.src} alt={image.alt} />
+				</div>
 			</div>
-		</div>
+		</a>
 	)
 }
 
