@@ -5,8 +5,8 @@ const Footer = () => {
 		<div className="footer">
 			<span>
 				Made with{' '}
-				<span role="img" style={{ color: 'red' }} aria-labelledby="heart">
-					❤
+				<span role="img" aria-label="heart" style={{ color: 'red' }}>
+					❤️
 				</span>{' '}
 				&copy; Mohammed Ishaq {new Date().getFullYear()}
 			</span>
