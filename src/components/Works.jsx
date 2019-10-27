@@ -20,7 +20,12 @@ const Work = ({ image }) => {
 				target="_blank"
 				className="work"
 			>
-				<div className="work-description">{image.alt}</div>
+				<div className="work-description">
+					<div className="work-description-container">
+						<span>Poster Design</span>
+						<span>{image.alt}</span>
+					</div>
+				</div>
 				<div className="work-image">
 					<div className="work-image-container">
 						<img src={image.src} alt={image.alt} />

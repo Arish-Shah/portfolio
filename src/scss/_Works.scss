@@ -8,6 +8,7 @@
 			Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		cursor: pointer;
 		box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.04);
+		border-radius: 4px;
 
 		&:hover {
 			box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.1);
@@ -27,6 +28,13 @@
 			font-weight: bold;
 			font-size: 1rem;
 			line-height: 1.5;
+
+			.work-description-container {
+				span {
+					line-height: 2;
+					display: block;
+				}
+			}
 		}
 
 		.work-image {
