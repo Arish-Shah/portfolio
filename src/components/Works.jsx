@@ -21,8 +21,10 @@ const Work = ({ image }) => {
 				className="work"
 			>
 				<div className="work-description">{image.alt}</div>
-				<div className="work-image-container">
-					<img src={image.src} alt={image.alt} />
+				<div className="work-image">
+					<div className="work-image-container">
+						<img src={image.src} alt={image.alt} />
+					</div>
 				</div>
 			</div>
 		</a>

@@ -15,6 +15,10 @@
 	font-display: fallback;
 }
 
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
 body {
 	background-color: #202326;
 	-webkit-font-smoothing: antialiased;
