@@ -4,8 +4,6 @@
 		grid-template-columns: 4fr 7fr;
 		margin-bottom: 4rem;
 		overflow: hidden;
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-			Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 		cursor: pointer;
 		box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.04);
 		border-radius: 4px;
@@ -16,9 +14,19 @@
 			.work-image::before {
 				opacity: 0.25;
 			}
+
+			.work-description {
+				.work-button {
+					color: $fadedBlue !important;
+
+					span {
+						transform: translateX(0.75rem);
+					}
+				}
+			}
 		}
 
-		.work-description {
+		.work-description-container {
 			position: relative;
 			background: #292d31;
 			display: flex;
@@ -27,12 +35,36 @@
 			color: $purple;
 			font-weight: bold;
 			font-size: 1rem;
-			line-height: 1.5;
 
-			.work-description-container {
-				span {
-					line-height: 2;
-					display: block;
+			.work-description {
+				h6 {
+					font-size: 0.85rem;
+					color: $fadedPurple;
+				}
+
+				h3 {
+					padding: 1.25rem 0;
+					font-size: 1.75rem;
+				}
+
+				p {
+					color: $grey;
+					padding-bottom: 2rem;
+					font-weight: normal;
+					line-height: 1.5;
+				}
+
+				.work-button {
+					color: $grey;
+					font-weight: 600;
+					transition: all 150ms ease-in-out;
+
+					span {
+						position: absolute;
+						margin-left: 0.5rem;
+						display: inline-block;
+						transition: transform 200ms ease-in-out;
+					}
 				}
 			}
 		}
@@ -45,7 +77,7 @@
 			align-items: flex-end;
 			overflow: hidden;
 			position: relative;
-			padding: 4rem 2rem 0 2rem;
+			padding: 3rem 2rem 0 2rem;
 
 			&::before {
 				position: absolute;
@@ -60,9 +92,9 @@
 			}
 
 			.work-image-container {
-				max-height: 250px;
 				overflow: hidden;
 				box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+				max-height: 250px;
 
 				img {
 					max-width: 400px;
@@ -81,8 +113,8 @@
 			grid-auto-flow: dense;
 			margin-bottom: 2rem;
 
-			.work-description {
-				height: 100px;
+			.work-description-container {
+				height: 250px;
 			}
 
 			.work-image {
