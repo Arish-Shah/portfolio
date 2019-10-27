@@ -1,7 +1,7 @@
 //Image imports
-import photoshop from '../images/photoshop-workshop.jpg'
-import cloud from '../images/cloud.jpg'
-import page2 from '../images/page-2.jpg'
+import photoshop from '../images/photoshop-workshop.webp'
+import cloud from '../images/cloud.webp'
+import page2 from '../images/page-2.webp'
 
 export const images = [
 	{
