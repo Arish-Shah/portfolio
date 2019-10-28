@@ -20,7 +20,7 @@ const Work = ({ image }) => {
 				target="_blank"
 				className="work"
 			>
-				<WorkContent title={image.alt} />
+				<WorkContent title={image.title} text={image.text} type={image.type} />
 				<div className="work-image">
 					<div className="work-image-container">
 						<img src={image.src} alt={image.alt} />
@@ -31,16 +31,13 @@ const Work = ({ image }) => {
 	)
 }
 
-const WorkContent = ({ title }) => {
+const WorkContent = ({ title, text, type }) => {
 	return (
 		<div className="work-description-container">
 			<div className="work-description">
-				<h6>Type of the Work</h6>
+				<h6>{type}</h6>
 				<h3>{title}</h3>
-				<p>
-					Ishaq is not telling me what to write so I am just going to leave this
-					here.
-				</p>
+				<p>{text}</p>
 				<div className="work-button">
 					Details
 					<span>→</span>

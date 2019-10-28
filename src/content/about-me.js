@@ -15,7 +15,7 @@ export default [
 	},
 	{
 		input: 'Ishaq.interests',
-		return: '["Designing"]',
+		return: '["Graphic Designing"]',
 	},
 	{
 		input: 'Ishaq.education',
@@ -23,7 +23,8 @@ export default [
 			'"Pursuing B.E. from Muffakham Jah College of Engineering and Technology."',
 	},
 	{
-		input: 'Ishaq.skills',
-		return: '["??"]',
+		input: 'Ishaq.experience',
+		return:
+			'2+ years <br />["Worked as an Intern", "Freelancer", "Full-Time Graphic Designer"]',
 	},
 ]
