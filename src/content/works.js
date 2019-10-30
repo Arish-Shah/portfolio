@@ -1,7 +1,6 @@
 //Image imports
 import photoshop from '../images/photoshop-workshop.webp'
 import cloud from '../images/cloud.webp'
-import page2 from '../images/page-2.webp'
 import bank from '../images/bank.webp'
 import csiBulletin from '../images/csi-bulletin.webp'
 
@@ -21,14 +20,6 @@ export const images = [
 		link:
 			'https://drive.google.com/drive/folders/1Ut9hnhT8kMippI4mEXgGn-M_sAbCJSmm',
 		text: 'Posts designed for Social Media Marketing and Banners for Publicity',
-	},
-	{
-		src: page2,
-		type: 'Three',
-		title: 'Proposal',
-		link:
-			'https://drive.google.com/drive/folders/15Pg2ghiHwwntCynAoNdTisQeI1K2SZ0n',
-		text: 'Some of the slides of Proposals and Reports',
 	},
 	{
 		src: bank,
